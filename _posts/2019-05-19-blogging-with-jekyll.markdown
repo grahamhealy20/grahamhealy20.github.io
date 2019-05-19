@@ -4,16 +4,13 @@ title:  "Blogging with Jekyll"
 date:   2019-05-19 14:21:00 +0100
 categories: jekyll blog programming pizza github pages
 ---
-
-## Setting up a blog with Jekyll
-
 Hi, in this blog article I'm going to go through how I set up this blog (blog-ception 🤯) using Jekyll.
 
 ### What's Jekyll?
 
 [Jekyll](https://jekyllrb.com/) is a static-site generator used for generating websites using [Markdown](https://en.wikipedia.org/wiki/Markdown). This means you don't need to worry about writing custom HTML/CSS (you can if you want!) and you can focus on writing your own content.
 
-Jekyll is different than the traditional CMS sytems such as Wordpress in the fact that it doesn't use a traditional database such as MySQL. Everything is composed as files which are then picked up by Jekyll and converted into HTML/CSS which can be served as a website. 
+Jekyll is different than the traditional CMS systems such as Wordpress in the fact that it doesn't use a traditional database such as MySQL. Everything is composed as files which are then picked up by Jekyll and converted into HTML/CSS which can be served as a website.
 
 ### Why I chose Jekyll
 I decided to go with Jekyll for my website/blog as I didn't want the operational overhead of having to install and manage a more heavyweight option such as a CMS like Wordpress. I just wanted something simple where I could configure how I wanted the site to look and then it was just a matter of me writing my blog posts in Markdown. I also didn't want to have to pay for hosting (we'll talk about that later! 😉). One other benefit is that since it's compiled static files, there is some great SEO optimisation.
@@ -46,7 +43,7 @@ Done installing documentation for jekyll after 0 seconds
 
 ## <a name="generating-the-jekyll-project"></a> Generating the Jekyll project
 ### Run the Jekyll generator
-Now that we have Ruby, bundler and Jekyll instealled, it's time to actually generate the Jekyll project. This is super easy and it's just a matter or running the `new` command that Jekyll provides:
+Now that we have Ruby, bundler and Jekyll installed, it's time to actually generate the Jekyll project. This is super easy and it's just a matter or running the `new` command that Jekyll provides:
 
 ```bash
 jekyll new my-awesome-blog
@@ -90,8 +87,8 @@ This is great! This means that Jekyll has successfully generated the blog inside
 │   └── 2019-05-19-welcome-to-jekyll.markdown
 ├── about.md
 └── index.md
-``` 
-We don't need to worry about most of these files yet but for now the ones we should be concered about are `_config.yml` and `index.md`.
+```
+We don't need to worry about most of these files yet but for now the ones we should be concerned about are `_config.yml` and `index.md`.
 
 ### Serve the Jekyll site
 We have the Jekyll site generated, but how do we actually see it? To achieve this, Jekyll provides a `serve` command which runs a small lightweight webserver. Run the following command to start the Jekyll server:
@@ -150,7 +147,7 @@ email: your-email@example.com
 #   - vendor/gems/
 #   - vendor/ruby/
 ```
-We now need to rebuild and reserve the Jekyll site to pick up our changes. 
+We now need to rebuild and reserve the Jekyll site to pick up our changes.
 
 ```bash
 bundle exec jekyll serve
@@ -162,7 +159,7 @@ Check it out! Our new title has shown up! Now that we've done the title, let's a
 
 This time, instead of modifying the global `_config.yml` we are going to add some new content using markdown.
 
-Open `index.md` in your favorite editor and change it to the following (or add your own fact about yourself!)
+Open `index.md` in your favourite editor and change it to the following (or add your own fact about yourself!)
 
 ```markdown
 ---
@@ -173,7 +170,7 @@ layout: home
 ---
 Hi! I'm Graham. I'm mildly addicted to Pizza and Coffee!
 ```
-One cool thing about Jekyll is that it will automatically take your edits/updates and automatically recompile them for you without having to stop and re-run the `serve` command again. This is a really nice timesaver! 
+One cool thing about Jekyll is that it will automatically take your edits/updates and automatically recompile them for you without having to stop and re-run the `serve` command again. This is a really nice timesaver!
 
 Going back to our website, when we refresh we can see the updated content! Nice!
 ![The new content on the homepage!](/assets/new_index.jpg)
@@ -182,7 +179,7 @@ Going back to our website, when we refresh we can see the updated content! Nice!
 ## Adding blog posts
 Now that we've changed the title and added a little bit about ourselves I think it's time that we add some posts to our blog! Another big feature of Jekyll is that it is **blog aware**. This means we simply have to pop in a new file in the posts directory and boom, we're done!
 
-Let's go ahead and do that now. I'm going to add a new post talking about my favorite types of Pizza. To do this, I'm going to create a new Markdown file called `2019-05-19-my-fave-pizza.md` and I'm going to save it inside the `_posts` directory. Our posts directory should now look like this:
+Let's go ahead and do that now. I'm going to add a new post talking about my favourite types of Pizza. To do this, I'm going to create a new Markdown file called `2019-05-19-my-fave-pizza.md` and I'm going to save it inside the `_posts` directory. Our posts directory should now look like this:
 
 ```bash
 ls _posts
@@ -201,7 +198,7 @@ categories: jekyll pizza food
 I love big pepperoni pizzas. Pineapple should **NEVER** belong on any pizza ever. Fight me.
 ```
 
-This file is a Markdown file but there is some Jekyll specific data at the top bewtween the `---` lines. This is called *front-matter* which describes the page data to Jekyll. This is important because if it wasn't there Jekyll wouldn't know what type of HTML template to use or what the title of the page would be. You can learn more about front-matter [here](https://jekyllrb.com/docs/front-matter/).
+This file is a Markdown file but there is some Jekyll specific data at the top between the `---` lines. This is called *front-matter* which describes the page data to Jekyll. This is important because if it wasn't there Jekyll wouldn't know what type of HTML template to use or what the title of the page would be. You can learn more about front-matter [here](https://jekyllrb.com/docs/front-matter/).
 
 So my article is done, since we have the Jekyll `serve` command running, we simply need to refresh the page on the browser and we should see our new shiny blog post!
 
@@ -220,10 +217,10 @@ So now that we have our blog generated with our new post, how can we serve this 
 jekyll build
 ```
 
-The resulting static files generated by Jekyll will be stored in the `_site` diretctory. We would then need to upload these somehow, usually via SFTP or SSH.
+The resulting static files generated by Jekyll will be stored in the `_site` directory. We would then need to upload these somehow, usually via SFTP or SSH.
 This is good as a once off, but if we needed to make a change or add a new blog post we would need to regenerate the static files and upload them again and again which would become tedious.
 
-But what if I told you there was a way to automate the static file generation and host your blog for **free?** 
+But what if I told you there was a way to automate the static file generation and host your blog for **free?**
 
 <p style="text-align: center;"> *audible gasps 😱* </p>
 
@@ -238,4 +235,3 @@ That's it, your done! You've found out how to install Jekyll, generate your new 
 
 Thanks for reading.
 Graham
-
