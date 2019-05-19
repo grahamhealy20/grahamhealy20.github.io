@@ -91,7 +91,7 @@ This is great! This means that Jekyll has successfully generated the blog inside
 We don't need to worry about most of these files yet but for now the ones we should be concerned about are `_config.yml` and `index.md`.
 
 ### Serve the Jekyll site
-We have the Jekyll site generated, but how do we actually see it? To achieve this, Jekyll provides a `serve` command which runs a small lightweight webserver. Run the following command to start the Jekyll server:
+We have the Jekyll site generated, but how do we actually see it? To achieve this, Jekyll provides a `serve` command which runs a small lightweight web server. Run the following command to start the Jekyll server:
 
 ```bash
 bundle exec jekyll serve
